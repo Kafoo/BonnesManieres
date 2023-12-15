@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - bonnemanieres',
-    title: 'bonnemanieres',
+    titleTemplate: '%s - thisisatest',
+    title: 'thisisatest',
     htmlAttrs: {
       lang: 'en'
     },
@@ -27,6 +27,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/main.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -46,18 +47,32 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/google-fonts'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
+      options: {
+        customProperties: true
+      },
       themes: {
+        light: {
+          background: '#F5F5F5',
+          primary: '#FFFCF5',
+          text: '#3A3D51',
+          secondary: '#9F8C4E',
+          black: '#000000'
+        },
         dark: {
-          primary: colors.blue.darken2,
+          background: '#F5F5F5',
+          primary: '#FFFCF5',
+          text: '#3A3D51',
+          secondary: '#9F8C4E',
+          black: '#000000',
           accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

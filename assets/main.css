@@ -1,0 +1,31 @@
+h1{
+  font-family: 'Yeseva One';
+  font-size: 70pt;
+}
+
+h2{
+  font-family: 'Yeseva One';
+  font-size: 52pt;
+}
+
+h3{
+  font-family: 'Yeseva One';
+  font-size: 21pt;
+}
+
+.classic-text{
+  font-family: 'Montserrat';
+  font-size: 19pt;
+}
+
+.bold-text{
+  font-family: 'Montserrat';
+  font-size: 19pt;
+  font-weight: bold;
+}
+
+.v-toolbar .v-btn{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 19pt;
+  font-weight: 100;
+}
