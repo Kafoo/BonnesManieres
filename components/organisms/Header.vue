@@ -1,0 +1,68 @@
+<template>
+  <div>
+
+  <v-container class="mt-n15">
+
+      <v-row justify="center">
+        <v-card elevation="0" color="background" width="100%" class="pa-9 d-flex justify-center">
+          <v-img
+            :width="200"
+            :max-width="200"
+            cover
+            :src="require('@/static/TextLogo.png')"
+            >
+          </v-img>
+        </v-card>
+
+      </v-row>
+
+      <v-row>
+
+        <v-app-bar
+        elevation="0"
+        height="40px"
+        class="mb-2 mt-0 mx-4"
+        >
+
+          <v-toolbar-items style="position: absolute; left: 10px;">
+            <SocialsIcons/>
+          </v-toolbar-items>
+
+          <Navigation/>
+
+          <ChooseLocation/>
+
+        </v-app-bar>
+
+      </v-row>
+
+      <v-row>
+        <v-card height="1500px">
+        </v-card>
+      </v-row>
+
+    </v-container>
+  </div>
+</template>
+
+<script>
+
+import Navigation from '~/components/molecules/Navigation.vue'
+import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
+import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
+
+export default {
+
+  components: { Navigation, SocialsIcons, ChooseLocation },
+
+  name: 'DefaultLayout',
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
