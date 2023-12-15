@@ -36,11 +36,6 @@
 
       </v-row>
 
-      <v-row>
-        <v-card height="1500px">
-        </v-card>
-      </v-row>
-
     </v-container>
   </div>
 </template>

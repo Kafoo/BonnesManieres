@@ -3,18 +3,18 @@
       <StickyHeader/>
       <HeaderVue/>
 
+            <v-row>
+        <v-card height="1000px">
+        </v-card>
+      </v-row>
+
       <v-main>
         <v-container>
           <Nuxt />
         </v-container>
       </v-main>
 
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
+      <FooterVue/>
   </v-app>
 </template>
 
@@ -22,10 +22,11 @@
 
 import HeaderVue from '~/components/organisms/Header.vue'
 import StickyHeader from '~/components/organisms/StickyHeader.vue'
+import FooterVue from '~/components/organisms/Footer.vue'
 
 export default {
 
-  components: { HeaderVue, StickyHeader },
+  components: { HeaderVue, StickyHeader, FooterVue },
 
   name: 'DefaultLayout',
   data () {

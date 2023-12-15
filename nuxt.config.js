@@ -63,14 +63,16 @@ export default {
           background: '#F5F5F5',
           primary: '#FFFCF5',
           text: '#3A3D51',
-          secondary: '#9F8C4E',
+          secondary: '#3A3D51',
+          third: '9F8C4E',
           black: '#000000'
         },
         dark: {
           background: '#F5F5F5',
           primary: '#FFFCF5',
           text: '#3A3D51',
-          secondary: '#9F8C4E',
+          secondary: '#3A3D51',
+          third: '9F8C4E',
           black: '#000000',
           accent: colors.grey.darken3,
           info: colors.teal.lighten1,
