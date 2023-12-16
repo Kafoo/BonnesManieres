@@ -1,17 +1,20 @@
 <template>
-  <div>
+  <div class="on-top">
 
-  <v-container class="mt-n15">
+    <v-container class="mt-n15">
 
       <v-row justify="center">
         <v-card elevation="0" color="background" width="100%" class="pa-9 d-flex justify-center">
-          <v-img
-            :width="200"
-            :max-width="200"
-            cover
-            :src="require('@/static/TextLogo.png')"
-            >
-          </v-img>
+          <router-link to="/">
+            <v-img
+              :width="200"
+              :max-width="200"
+              cover
+              :src="require('@/static/TextLogo.png')"
+              to="/"
+              >
+            </v-img>
+          </router-link>
         </v-card>
 
       </v-row>
@@ -59,5 +62,9 @@ export default {
 </script>
 
 <style scoped>
+
+.on-top{
+  z-index: 2;
+}
 
 </style>

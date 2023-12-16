@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8" color="background">
+    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12" color="background">
 
         <v-sheet color="background">
           <v-img

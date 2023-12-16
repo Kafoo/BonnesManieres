@@ -3,11 +3,6 @@
       <StickyHeader/>
       <HeaderVue/>
 
-            <v-row>
-        <v-card height="1000px">
-        </v-card>
-      </v-row>
-
       <v-main>
         <v-container>
           <Nuxt />

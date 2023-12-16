@@ -1,25 +1,21 @@
 <template>
   <v-toolbar-items class="d-flex mx-auto align-center" >
 
-    <v-btn class="px-3" elevation="0">Notre Expertise</v-btn>
+    <div v-for="navItem in navItems" :key="navItem.name" class="d-flex mx-auto align-center">
 
-    <v-card elevation="0" height="20px" class="my-2" color="background">
-      <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
-    </v-card>
+      <v-card v-if="navItem.id > 1" elevation="0" height="20px" class="my-2" color="background">
+        <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
+      </v-card>
 
-    <v-btn class="px-3" elevation="0">Nos Créations</v-btn>
+      <nuxt-link
+      class="nuxt-link text-uppercase ma-2"
+      :to="navItem.path"
+      exact>
+        {{navItem.name}}
+      </nuxt-link>
 
-    <v-card elevation="0" height="20px" class="my-2" color="background">
-      <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
-    </v-card>
+    </div>
 
-    <v-btn class="px-3" elevation="0">Qui Sommes Nous</v-btn>
-
-    <v-card elevation="0" height="20px" class="my-2" color="background">
-      <v-divider class="ma-0 mb-1" color="#00000070" vertical></v-divider>
-    </v-card>
-
-    <v-btn class="px-3" elevation="0">Contact</v-btn>
   </v-toolbar-items>
 </template>
 
@@ -31,11 +27,47 @@ export default defineComponent({
   },
   data () {
     return {
+      navItems: [
+        {
+          id: 1,
+          name: 'notre expertise',
+          path: '/expertise'
+        },
+        {
+          id: 2,
+          name: 'nos créations',
+          path: '/creations'
+        },
+        {
+          id: 3,
+          name: 'qui sommes nous',
+          path: '/nous'
+        },
+        {
+          id: 4,
+          name: 'contact',
+          path: '/contact'
+        }
+      ]
     }
   }
 })
 </script>
 
 <style scoped>
+
+.nuxt-link{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 11pt;
+  padding: 5px;
+  text-decoration: none;
+  color: grey;
+  transition: 0.2s ease-out
+}
+
+.nuxt-link:hover, .nuxt-link-active {
+  color: black;
+  transition: 0.2s ease-out;
+}
 
 </style>

@@ -4,8 +4,8 @@
 
       <v-app-bar
       elevation="0"
-      height="50px"
-      class=" ma-2 mx-4"
+      height="60px"
+      class="mx-4"
       >
 
         <v-toolbar-items
@@ -52,7 +52,7 @@ export default {
 <style scoped>
 
 .sticky-bar{
-  z-index: 0;
+  z-index: 1;
   position: sticky;
   top: 0;
   left: 0;
