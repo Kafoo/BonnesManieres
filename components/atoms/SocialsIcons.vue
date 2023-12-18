@@ -1,14 +1,8 @@
 <template>
-  <div>
-    <v-btn min-width="0" text rounded class="pa-1 px-0 ma-0">
-      <v-icon style="position: relative;">mdi-facebook</v-icon>
-    </v-btn>
-    <v-btn min-width="0" text rounded class="pa-1 px-0 ma-0">
-      <v-icon style="position: relative;">mdi-instagram</v-icon>
-    </v-btn>
-    <v-btn min-width="0" text rounded class="pa-1 px-0 ma-0">
-      <v-icon style="position: relative;">mdi-linkedin</v-icon>
-    </v-btn>
+  <div class="cursor">
+      <v-icon class="ma-0" color="text" style="position: relative;">mdi-facebook</v-icon>
+      <v-icon class="ma-0" color="text" style="position: relative;">mdi-instagram</v-icon>
+      <v-icon class="ma-0" color="text" style="position: relative;">mdi-linkedin</v-icon>
   </div>
 </template>
 
@@ -26,5 +20,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+.v-icon:hover{
+  cursor: pointer;
+}
 
 </style>

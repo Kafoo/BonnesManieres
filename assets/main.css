@@ -7,9 +7,7 @@
 #app{
   background-image: url(../static/lines/HomeLine.svg) !important;
   background-size: cover;
-  background-position: 0px -500px !important;
 }
-
 
 .backgrounded {
     background-color: #ffffff !important;
@@ -22,7 +20,7 @@
      -khtml-user-select: none; /* Konqueror HTML */
        -moz-user-select: none; /* Old versions of Firefox */
         -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently*/
+            user-select: none; /* Non-prefixed version, currently*/;
 }
 
 .selectable-text, input, textarea, .description{
@@ -51,6 +49,13 @@ h3{
   font-size: 21pt;
 }
 
+p{
+  font-family: 'Montserrat';
+  font-size: 12px;
+  letter-spacing: 1px;
+  max-width: 900px;
+}
+
 .classic-text{
   font-family: 'Montserrat';
   font-size: 19pt;
@@ -62,10 +67,12 @@ h3{
   font-weight: bold;
 }
 
-.v-toolbar .v-btn{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 19pt;
-  font-weight: 100;
+.Montserrat--text{
+  font-family: 'Montserrat';
+}
+
+.cursor{
+  cursor: pointer;
 }
 
 .centering{

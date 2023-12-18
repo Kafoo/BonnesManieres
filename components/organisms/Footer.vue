@@ -1,27 +1,42 @@
 <template>
   <div>
-    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12">
+      <hr/>
+      <v-sheet class="d-flex flex-column justify-center align-center backgrounded ma-auto" color="blue" width="90%" height="250px">
 
-        <v-sheet>
-          <v-img
-          :src="require('@/static/HeadTextLogo.png')"
-          width="150px"
-          >
-          </v-img>
+        <ClassicTitle
+        color='white'
+        text="Let’s share who we are"
+        line2="watch what we do."
+        small
+        />
+
+      </v-sheet>
+
+    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12 black--text">
+        <v-sheet class="d-flex justify-space-around flex-grow-1 align-center">
+          <v-sheet>
+            <v-img
+            :src="require('@/static/HeadTextLogo.png')"
+            width="120px"
+            >
+            </v-img>
+          </v-sheet>
+
+          <v-sheet class='Montserrat--text'>
+            <v-sheet class="font-weight-bold">PARIS - CANNES - BARCELONE</v-sheet>
+            <v-sheet><v-icon size="17px">mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</v-sheet>
+            <v-sheet><v-icon size="17px">mdi-email</v-icon> nadia@lesbonnesmanieres.paris</v-sheet>
+            <SocialsIcons/>
+          </v-sheet>
         </v-sheet>
 
-        <v-sheet>
-          <p>PARIS - CANNES - BARCELONE</p>
-          <p><v-icon>mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</p>
-          <p><v-icon>mdi-email</v-icon>nadia@lesbonnesmanieres.paris</p>
-          <SocialsIcons/>
-        </v-sheet>
-
-        <v-sheet>
-          <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
-        </v-sheet>
-        <v-sheet class="mr-8">
-          <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
+        <v-sheet class="d-flex justify-space-around flex-grow-1 align-center">
+          <v-sheet>
+            <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
+          </v-sheet>
+          <v-sheet class="mr-8">
+            <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
+          </v-sheet>
         </v-sheet>
 
     </v-sheet>
@@ -34,10 +49,11 @@
 <script lang="ts">
 
 import SocialsIcons from '../atoms/SocialsIcons.vue'
+import ClassicTitle from '../atoms/ClassicTitle.vue';
 
 export default {
 
-  components: { SocialsIcons },
+  components: { SocialsIcons, ClassicTitle },
 
   name: 'DefaultLayout',
   data () {
@@ -63,14 +79,27 @@ export default {
 
 <style scoped>
 
+hr{
+  margin: 30px 0 50px 0;
+  border: none;
+  border-top: 1px solid black;
+  color: black;
+  height: 2px;
+}
 .v-footer{
   font-family: 'Montserrat';
   font-size: small;
 }
 
 p{
-  font-family: 'YESEVA ONE';
-  line-height: 10px;
+  font-family: 'Montserrat';
+  line-height: 5px;
+
+}
+
+.Montserrat--text{
+  font-size: 12px;
+  line-height: 25px;
 }
 
 </style>
