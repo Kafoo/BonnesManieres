@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
 
-      <v-sheet class="d-flex flex-column justify-center align-center" color="blue" width="100%" height="300px">
+      <v-sheet class="d-flex flex-column justify-center align-center backgrounded" color="blue" width="100%" height="300px">
 
           <ClassicTitle text="Anything, Anytime, Anywhere"/>
 

@@ -1,4 +1,4 @@
-.theme--light.v-sheet,
+.theme--light.v-sheet:not(.backgrounded),
 .theme--light.v-app-bar.v-toolbar.v-sheet
 .theme--light.v-application{
   background-color: transparent !important;
@@ -11,10 +11,10 @@
 }
 
 
-/* Don't know why this specific class doesn't want to match theme colors */
-/* .theme--light.v-app-bar.v-toolbar.v-sheet {
-    background-color: #ffffff !important
-} */
+.backgrounded {
+    background-color: #ffffff !important;
+    transition: 0s;
+}
 
 *{
   -webkit-touch-callout: none; /* iOS Safari */

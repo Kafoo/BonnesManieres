@@ -3,7 +3,8 @@
       <v-app-bar
       elevation="0"
       height="60px"
-      class="mb-2 mt-0 mx-4 plop"
+      class="mb-2 mt-0 mx-4 sticky-header"
+      :class="head ? 'backgrounded' : 'transparent'"
       >
 
         <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
@@ -47,7 +48,7 @@ export default defineComponent({
 
 <style scoped>
 
-.plop{
+.sticky-header{
   position: sticky;
   top: 0;
   left: 0;
