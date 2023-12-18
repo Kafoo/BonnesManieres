@@ -57,12 +57,12 @@ export default defineComponent({
 .invisible {
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0.08s, opacity 0.08s linear;
 }
 .visible {
   visibility: visible;
   opacity: 1;
+  transition: visibility 0.08s, opacity 0.08s linear;
 }
-
 
 </style>

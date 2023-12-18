@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12" color="background">
+    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12">
 
-        <v-sheet color="background">
+        <v-sheet>
           <v-img
           :src="require('@/static/HeadTextLogo.png')"
           width="150px"
@@ -10,17 +10,17 @@
           </v-img>
         </v-sheet>
 
-        <v-sheet color="background">
+        <v-sheet>
           <p>PARIS - CANNES - BARCELONE</p>
           <p><v-icon>mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</p>
           <p><v-icon>mdi-email</v-icon>nadia@lesbonnesmanieres.paris</p>
           <SocialsIcons/>
         </v-sheet>
 
-        <v-sheet color="background">
+        <v-sheet>
           <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
         </v-sheet>
-        <v-sheet color="background" class="mr-8">
+        <v-sheet class="mr-8">
           <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
         </v-sheet>
 

@@ -1,11 +1,10 @@
 <template>
-  <v-app light>
+  <v-app light id="app">
       <!-- <StickyHeader/> -->
 
       <v-row justify="center">
         <v-card
         elevation="0"
-        color="background"
         width="100%"
         class="pa-9 d-flex justify-center"
         v-intersect="onIntersect"
