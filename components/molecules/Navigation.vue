@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar-items class="d-flex mx-auto align-center" >
+  <v-toolbar-items class="d-flex mx-auto align-center">
 
     <div v-for="navItem in navItems" :key="navItem.name" class="d-flex mx-auto align-center">
 
@@ -58,16 +58,18 @@ export default defineComponent({
 
 .nuxt-link{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 11pt;
+  font-size: 13pt;
   padding: 5px;
+  font-weight: lighter;
   text-decoration: none;
-  color: grey;
-  transition: 0.2s ease-out
+  color: black;
+  transition: 0.1s ease-out;
+  letter-spacing: 1px
 }
 
 .nuxt-link:hover, .nuxt-link-active {
-  color: black;
-  transition: 0.2s ease-out;
+  text-shadow: 1px 0px 0px black;
+  transition: 0.1s ease-out;
 }
 
 </style>

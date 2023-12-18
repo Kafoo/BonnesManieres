@@ -17,7 +17,7 @@
           class="mr-3"
           >
           </v-img>
-          <SocialsIcons/>
+          <SocialsIcons class="medium"/>
         </v-toolbar-items>
 
         <Navigation/>
@@ -56,6 +56,12 @@ export default {
   position: sticky;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 1265px) {
+  .socials{
+    display: none;
+  }
 }
 
 </style>

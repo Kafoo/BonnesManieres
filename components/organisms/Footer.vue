@@ -24,7 +24,6 @@
           <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
         </v-sheet>
 
-
     </v-sheet>
     <v-footer color="secondary" class="d-flex justify-space-around white--text">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
@@ -34,7 +33,7 @@
 
 <script lang="ts">
 
-import SocialsIcons from '../atoms/SocialsIcons.vue';
+import SocialsIcons from '../atoms/SocialsIcons.vue'
 
 export default {
 

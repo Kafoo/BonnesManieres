@@ -1,6 +1,25 @@
+*{
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+}
+
+.selectable-text, input, textarea, .description{
+  -webkit-touch-callout: text; /* iOS Safari */
+    -webkit-user-select: text; /* Safari */
+     -khtml-user-select: text; /* Konqueror HTML */
+       -moz-user-select: text; /* Old versions of Firefox */
+        -ms-user-select: text; /* Internet Explorer/Edge */
+            user-select: text; /* Non-prefixed version, currently*/
+}
+
 h1{
   font-family: 'Yeseva One';
-  font-size: 70pt;
+  font-size: 40px;
+  margin-bottom: 5px;
 }
 
 h2{
@@ -30,8 +49,45 @@ h3{
   font-weight: 100;
 }
 
+
+/* Don't know why this specific class doesn't want to match theme colors */
+.theme--light.v-app-bar.v-toolbar.v-sheet {
+    background-color: #ffffff !important
+}
+
 .centering{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.centering-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile{
+  display: none;
+}
+
+.desktop{
+  display: initial;
+}
+
+@media (max-width: 600px) {
+  .mobile{
+    display: initial;
+  }
+  .desktop{
+    display: none;
+  }
+}
+
+@media (max-width: 1265px) {
+  .medium{
+    display: none;
+  }
+
 }

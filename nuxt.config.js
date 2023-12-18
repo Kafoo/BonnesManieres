@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - thisisatest',
-    title: 'thisisatest',
+    titleTemplate: '%s - bonnesmanieres',
+    title: 'bonnesmanieres',
     htmlAttrs: {
       lang: 'en'
     },
@@ -42,7 +42,8 @@ export default {
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/composition-api/module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -60,16 +61,16 @@ export default {
       },
       themes: {
         light: {
-          background: '#F5F5F5',
-          primary: '#FFFCF5',
+          background: '#FFFFFF',
+          primary: '#FFFFFF',
           text: '#3A3D51',
           secondary: '#3A3D51',
           third: '9F8C4E',
           black: '#000000'
         },
         dark: {
-          background: '#F5F5F5',
-          primary: '#FFFCF5',
+          background: '#FFFFFF',
+          primary: '#FFFFFF',
           text: '#3A3D51',
           secondary: '#3A3D51',
           third: '9F8C4E',

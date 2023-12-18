@@ -1,70 +1,68 @@
 <template>
-  <div class="on-top">
 
-    <v-container class="mt-n15">
+      <v-app-bar
+      elevation="0"
+      height="60px"
+      class="mb-2 mt-0 mx-4 plop"
+      >
 
-      <v-row justify="center">
-        <v-card elevation="0" color="background" width="100%" class="pa-9 d-flex justify-center">
-          <router-link to="/">
-            <v-img
-              :width="200"
-              :max-width="200"
-              cover
-              :src="require('@/static/TextLogo.png')"
-              to="/"
-              >
-            </v-img>
-          </router-link>
-        </v-card>
+        <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
+          <v-img
+          :class="head ? 'visible' : 'invisible'"
+          :src="require('@/static/HeadLogo.png')"
+          width="40px"
+          class="mr-3"
+          >
+          </v-img>
+          <SocialsIcons/>
+        </v-toolbar-items>
 
-      </v-row>
+        <Navigation/>
 
-      <v-row>
+        <ChooseLocation/>
 
-        <v-app-bar
-        elevation="0"
-        height="40px"
-        class="mb-2 mt-0 mx-4"
-        >
+      </v-app-bar>
 
-          <v-toolbar-items style="position: absolute; left: 10px;">
-            <SocialsIcons/>
-          </v-toolbar-items>
-
-          <Navigation/>
-
-          <ChooseLocation/>
-
-        </v-app-bar>
-
-      </v-row>
-
-    </v-container>
-  </div>
 </template>
 
-<script>
+<script lang="ts">
 
+import { defineComponent } from 'vue'
 import Navigation from '~/components/molecules/Navigation.vue'
 import SocialsIcons from '~/components/atoms/SocialsIcons.vue'
 import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 
-export default {
-
-  components: { Navigation, SocialsIcons, ChooseLocation },
-
+export default defineComponent({
   name: 'DefaultLayout',
+  components: { Navigation, SocialsIcons, ChooseLocation },
+  props: {
+    head: Boolean
+  },
   data () {
     return {
     }
   }
-}
+})
 </script>
 
 <style scoped>
 
-.on-top{
-  z-index: 2;
+.plop{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 </style>
