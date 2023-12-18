@@ -56,19 +56,28 @@ export default defineComponent({
 
 <style scoped>
 
+.v-toolbar-items {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  font: 120% system-ui;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+
 .nuxt-link{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 13pt;
+  font-family:'Montserrat';
+  font-size: 11pt;
   padding: 5px;
   font-weight: lighter;
   text-decoration: none;
   color: black;
   transition: 0.1s ease-out;
-  letter-spacing: 1px
 }
 
 .nuxt-link:hover, .nuxt-link-active {
-  text-shadow: 1px 0px 0px black;
+  font-weight: 900;
   transition: 0.1s ease-out;
 }
 

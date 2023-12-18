@@ -43,13 +43,22 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/composition-api/module'
+    '@nuxtjs/composition-api/module',
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    download: true,
+    outputDir: 'assets/googlefonts',
+    families: {
+      Montserrat: true,
+      'Yeseva One': true
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

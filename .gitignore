@@ -10,6 +10,9 @@ yarn-error.log*
 # VsCode Workspace
 *.code-workspace
 
+#Files from Mathieu
+MatAssets
+
 # Runtime data
 pids
 *.pid
