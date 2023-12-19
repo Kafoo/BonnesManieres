@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-btn class="rounded-lg ma-5" outlined :to="to">
+    <v-btn class="rounded-lg ma-5 pa-5 font-weight-bold" outlined :to="to">
       {{text}}
     </v-btn>
   </div>

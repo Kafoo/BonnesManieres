@@ -24,6 +24,18 @@
       </p>
     </v-sheet>
 
+    <v-sheet class="d-flex justify-center align-start mt-8">
+
+      <LabeledPicture :imageSrc="require('@/static/pictures/Dior-303.jpg')" text="Soirées d'entreprise et lancement de produit"/>
+      <LabeledPicture :imageSrc="require('@/static/pictures/Dior-784.jpg')" text="Séminaires d'entreprise"/>
+      <LabeledPicture :imageSrc="require('@/static/pictures/alban_pichon.jpg')" text="Lieux éphémères / Stands"/>
+
+    </v-sheet>
+
+    <v-sheet class="centering mt-6">
+      <ClassicButton text="découvrez nos créations" to="/creations"/>
+    </v-sheet>
+
   </div>
 
 </template>
@@ -34,10 +46,11 @@ import { defineComponent } from 'vue'
 import ClassicButton from '~/components/molecules/ClassicButton.vue'
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue'
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue'
+import LabeledPicture from '~/components/molecules/LabeledPicture.vue'
 
 export default defineComponent({
 
-  components: { ClassicButton, HorizontalDivider, ClassicTitle },
+  components: { ClassicButton, HorizontalDivider, ClassicTitle, LabeledPicture },
 
   props: {
 

@@ -71,6 +71,10 @@ p{
   font-family: 'Montserrat';
 }
 
+.Yeseva--text{
+  font-family: 'Yeseva One';
+}
+
 .cursor{
   cursor: pointer;
 }

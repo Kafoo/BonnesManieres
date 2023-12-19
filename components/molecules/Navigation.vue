@@ -65,7 +65,6 @@ export default defineComponent({
   padding: 2rem 1rem;
 }
 
-
 .nuxt-link{
   font-family:'Montserrat';
   font-size: 11pt;
