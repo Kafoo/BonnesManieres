@@ -17,7 +17,7 @@
           class="mr-3"
           >
           </v-img>
-          <SocialsIcons class="medium"/>
+          <SocialsIcons class="mediumScreen"/>
         </v-toolbar-items>
 
         <Navigation/>

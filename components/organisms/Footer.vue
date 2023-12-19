@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="text-no-wrap">
       <hr/>
       <v-sheet class="d-flex flex-column justify-center align-center backgrounded ma-auto" color="blue" width="90%" height="250px">
 
         <ClassicTitle
         color='white'
-        text="Let’s share who we are"
+        line1="Let’s share who we are"
         line2="watch what we do."
         small
         />
@@ -13,7 +13,10 @@
       </v-sheet>
 
     <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12 black--text">
-        <v-sheet class="d-flex justify-space-around flex-grow-1 align-center">
+        <v-sheet
+        class="d-flex justify-space-around flex-grow-1 align-center"
+        :class="mobile?'flex-column':''"
+        >
           <v-sheet>
             <v-img
             :src="require('@/static/HeadTextLogo.png')"
@@ -30,7 +33,10 @@
           </v-sheet>
         </v-sheet>
 
-        <v-sheet class="d-flex justify-space-around flex-grow-1 align-center">
+        <v-sheet
+        v-if="!mobile"
+        class="d-flex justify-space-around flex-grow-1 align-center"
+        >
           <v-sheet>
             <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
           </v-sheet>
@@ -40,6 +46,19 @@
         </v-sheet>
 
     </v-sheet>
+
+    <v-sheet
+    v-if="mobile"
+    class="d-flex flex-wrap mx-2 justify-center">
+      <p
+      v-for="activity in activities"
+      :key="activity.name"
+      class="mr-2"
+      >
+        - {{ activity.name }}
+      </p>
+    </v-sheet>
+
     <v-footer color="secondary" class="d-flex justify-space-around white--text">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
     </v-footer>
@@ -48,33 +67,44 @@
 
 <script lang="ts">
 
+import { defineComponent } from '@nuxtjs/composition-api';
 import SocialsIcons from '../atoms/SocialsIcons.vue'
 import ClassicTitle from '../atoms/ClassicTitle.vue';
+import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
-export default {
+export default defineComponent({
 
   components: { SocialsIcons, ClassicTitle },
 
   name: 'DefaultLayout',
-  data () {
+  setup () {
+    const mobile = isMobile(window)
+
+    const activitesColumn1 = [
+      { name: 'Concept créatif' },
+      { name: 'Stratégie digitale, physique, hybride' },
+      { name: 'Création de contenu' },
+      { name: 'Design graphique' },
+      { name: 'Pop-up store' }
+    ]
+    const activitesColumn2 = [
+      { name: 'Scénographie et design d’espace' },
+      { name: 'Logistique et Production' },
+      { name: 'Technique' },
+      { name: 'Soirées corporate' },
+      { name: 'Séminaires d’entreprise' }
+    ]
+
+    const activities = activitesColumn1.concat(activitesColumn2)
+
     return {
-      activitesColumn1: [
-        { name: 'Concept créatif' },
-        { name: 'Stratégie digitale, physique, hybride' },
-        { name: 'Création de contenu' },
-        { name: 'Design graphique' },
-        { name: 'Pop-up store' }
-      ],
-      activitesColumn2: [
-        { name: 'Scénographie et design d’espace' },
-        { name: 'Logistique et Production' },
-        { name: 'Technique' },
-        { name: 'Soirées corporate' },
-        { name: 'Séminaires d’entreprise' }
-      ]
+      mobile,
+      activitesColumn1,
+      activitesColumn2,
+      activities
     }
   }
-}
+})
 </script>
 
 <style scoped>

@@ -1,17 +1,22 @@
+
+/* overflow:hidden prevent sticky nav to stick. Solution can be "contain: paint;" */
+.v-application{
+  contain: paint;
+}
+
 .theme--light.v-sheet:not(.backgrounded),
 .theme--light.v-app-bar.v-toolbar.v-sheet
 .theme--light.v-application{
   background-color: transparent !important;
 }
 
-#app{
+.v-application{
   background-image: url(../static/lines/HomeLine.svg) !important;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .backgrounded {
     background-color: #ffffff !important;
-    transition: 0s;
 }
 
 *{
@@ -34,7 +39,7 @@
 
 h1{
   font-family: 'Yeseva One';
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
@@ -92,26 +97,36 @@ p{
   align-items: center;
 }
 
-.mobile{
-  display: none;
+@media (min-width: 601px) {
+
+  .mobile{
+    display: none !important;
+  }
 }
 
-.desktop{
-  display: initial;
-}
+
+
+/* .desktop{
+  display: initial !important;
+} */
 
 @media (max-width: 600px) {
-  .mobile{
-    display: initial;
-  }
+  /* .mobile{
+    display: initial !important;
+  } */
   .desktop{
-    display: none;
+    display: none !important;
   }
 }
 
 @media (max-width: 1265px) {
-  .medium{
-    display: none;
+  .mediumScreen{
+    display: none !important;
   }
+}
 
+@media (max-width: 920px) {
+  .hideOn920{
+    display: none !important;
+  }
 }

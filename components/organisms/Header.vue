@@ -1,28 +1,28 @@
 <template>
 
-      <v-app-bar
-      elevation="0"
-      height="60px"
-      class="mb-2 mt-0 mx-4 sticky-header"
-      :class="head ? 'backgrounded' : 'transparent'"
+  <v-app-bar
+  elevation="0"
+  height="60px"
+  class="mb-2 mt-0 px-4 sticky-header desktop"
+  :class="head ? 'backgrounded' : 'transparent'"
+  >
+
+    <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
+      <v-img
+      :class="head ? 'visible' : 'invisible'"
+      :src="require('@/static/HeadLogo.png')"
+      width="40px"
+      class="mr-3"
       >
+      </v-img>
+      <SocialsIcons class="hideOn920"/>
+    </v-toolbar-items>
 
-        <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
-          <v-img
-          :class="head ? 'visible' : 'invisible'"
-          :src="require('@/static/HeadLogo.png')"
-          width="40px"
-          class="mr-3"
-          >
-          </v-img>
-          <SocialsIcons/>
-        </v-toolbar-items>
+    <Navigation/>
 
-        <Navigation/>
+    <ChooseLocation/>
 
-        <ChooseLocation/>
-
-      </v-app-bar>
+  </v-app-bar>
 
 </template>
 

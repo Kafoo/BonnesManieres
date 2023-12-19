@@ -1,12 +1,12 @@
 import { computed } from '@nuxtjs/composition-api'
 
-export const isMobile = (root: any) =>
+export const isMobile = (window: any) =>
   computed(() => {
-    const breakpoint = root.$vuetify.breakpoint.name
+    const breakpoint = window.$nuxt.$vuetify.breakpoint.name
     return breakpoint === 'xs'
   })
 
-export const windowWidth = (root: any) =>
+export const windowWidth = (window: any) =>
   computed(() => {
-    return root.$vuetify.breakpoint.width
+    return window.$nuxt.$vuetify.breakpoint.width
   })

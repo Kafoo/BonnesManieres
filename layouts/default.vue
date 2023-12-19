@@ -1,28 +1,36 @@
 <template>
-  <v-app light id="app">
-      <!-- <StickyHeader/> -->
 
-      <v-row justify="center">
-        <v-card
-        elevation="0"
-        width="100%"
-        class="pa-9 d-flex justify-center"
-        v-intersect="onIntersect"
-        >
-          <router-link to="/">
-            <v-img
-              :width="200"
-              :max-width="200"
-              cover
-              :src="require('@/static/TextLogo.png')"
-              to="/"
-              >
-            </v-img>
-          </router-link>
-        </v-card>
+  <v-app light>
 
-      </v-row>
-      <HeaderVue :head= "head.value" />
+      <v-navigation-drawer
+        app
+        absolute
+        temporary
+        v-model="drawer"
+        class="d-flex flex-column align-center pt-10"
+      >
+        <p>plop</p>
+        <p>plip</p>
+        <p>plap</p>
+      </v-navigation-drawer>
+
+      <v-btn
+      @click.stop="drawer = !drawer"
+      class="mobile drawer-btn pa-6 ml-4 align-self-start"
+      icon
+      width="70px"
+      height="70px"
+      elevation="1"
+      >
+        <v-icon
+        color="black"
+        size="45px"
+        >mdi-menu</v-icon>
+      </v-btn>
+
+      <TopLogo @visibleHead="isHeadVisible"/>
+
+      <HeaderVue :head= "head" />
 
       <v-main>
         <v-container>
@@ -31,27 +39,38 @@
       </v-main>
 
       <FooterVue/>
+
   </v-app>
+
 </template>
 
 <script lang="ts">
 
-import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 import HeaderVue from '~/components/organisms/Header.vue'
 import FooterVue from '~/components/organisms/Footer.vue'
+import TopLogo from '~/components/atoms/TopLogo.vue'
+import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default defineComponent({
-  components: { HeaderVue, FooterVue },
+  components: { HeaderVue, FooterVue, TopLogo },
   name: 'Default',
 
   setup () {
+    const drawer = ref(false)
     // To know if HeadLogo has to be shown in Navigation
-    const head = reactive({ value: true })
-    function onIntersect (isIntersecting:any) { head.value = !isIntersecting[0].isIntersecting }
+    const head = ref(true)
+    const isHeadVisible = (isVisible:boolean) => {
+      head.value = isVisible
+    }
+
+    const mobile = isMobile(window)
 
     return {
-      onIntersect,
-      head
+      head,
+      mobile,
+      drawer,
+      isHeadVisible
     }
   }
 })
@@ -60,20 +79,23 @@ export default defineComponent({
 
 <style scoped>
 
-.page-enter-active,
-.page-leave-active {
-
-}
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
   transition: all 0.15s;
 }
 
-.plop{
+.drawer-btn{
   position: sticky;
-  top: 0;
-  left: 0;
+  background-color: #ffffff;
+  margin-bottom: -100px;
+  margin-top: 28px;
+  left: 17px;
+  top: 17px;
+  z-index: 2;
+}
+
+.v-navigation-drawer{
   z-index: 3;
 }
 

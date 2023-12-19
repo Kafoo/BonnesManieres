@@ -8,7 +8,7 @@
       </v-card>
 
       <nuxt-link
-      class="nuxt-link text-uppercase ma-2"
+      class="nuxt-link text-uppercase ma-2 text-no-wrap"
       :to="navItem.path"
       exact>
         {{navItem.name}}
