@@ -1,7 +1,11 @@
 
 /* overflow:hidden prevent sticky nav to stick. Solution can be "contain: paint;" */
-.v-application{
+/* .v-application{
   contain: paint;
+} */
+
+.v-sheet{
+  overflow: hidden !important;
 }
 
 .theme--light.v-sheet:not(.backgrounded),

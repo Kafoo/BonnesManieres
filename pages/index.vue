@@ -41,7 +41,6 @@
       </p>
     </v-sheet>
 
-
       <v-carousel
       v-if="mobile"
       height="800px"
@@ -75,7 +74,6 @@
 
     </v-sheet>
 
-
     <v-sheet
     class="centering mt-6 desktop">
       <ClassicButton text="découvrez nos créations" to="/creations"/>
@@ -87,7 +85,7 @@
 
 <script lang="ts">
 
-import { defineComponent} from 'vue'
+import { defineComponent } from 'vue'
 import ClassicButton from '~/components/molecules/ClassicButton.vue'
 import HorizontalDivider from '~/components/atoms/HorizontalDivider.vue'
 import ClassicTitle from '~/components/atoms/ClassicTitle.vue'

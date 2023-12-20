@@ -2,31 +2,9 @@
 
   <v-app light>
 
-      <v-navigation-drawer
-        app
-        absolute
-        temporary
-        v-model="drawer"
-        class="d-flex flex-column align-center pt-10"
-      >
-        <p>plop</p>
-        <p>plip</p>
-        <p>plap</p>
-      </v-navigation-drawer>
+      <MobileDrawer :head= "head"/>
 
-      <v-btn
-      @click.stop="drawer = !drawer"
-      class="mobile drawer-btn pa-6 ml-4 align-self-start"
-      icon
-      width="70px"
-      height="70px"
-      elevation="1"
-      >
-        <v-icon
-        color="black"
-        size="45px"
-        >mdi-menu</v-icon>
-      </v-btn>
+      <ChooseLocation class="mobile choose-location-absolute"/>
 
       <TopLogo @visibleHead="isHeadVisible"/>
 
@@ -50,14 +28,15 @@ import { defineComponent, ref } from '@nuxtjs/composition-api'
 import HeaderVue from '~/components/organisms/Header.vue'
 import FooterVue from '~/components/organisms/Footer.vue'
 import TopLogo from '~/components/atoms/TopLogo.vue'
+import MobileDrawer from '~/components/organisms/MobileDrawer.vue'
+import ChooseLocation from '~/components/atoms/ChooseLocation.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default defineComponent({
-  components: { HeaderVue, FooterVue, TopLogo },
+  components: { HeaderVue, FooterVue, TopLogo, MobileDrawer, ChooseLocation },
   name: 'Default',
 
   setup () {
-    const drawer = ref(false)
     // To know if HeadLogo has to be shown in Navigation
     const head = ref(true)
     const isHeadVisible = (isVisible:boolean) => {
@@ -69,7 +48,6 @@ export default defineComponent({
     return {
       head,
       mobile,
-      drawer,
       isHeadVisible
     }
   }
@@ -85,18 +63,10 @@ export default defineComponent({
   transition: all 0.15s;
 }
 
-.drawer-btn{
-  position: sticky;
-  background-color: #ffffff;
-  margin-bottom: -100px;
-  margin-top: 28px;
-  left: 17px;
-  top: 17px;
-  z-index: 2;
-}
-
-.v-navigation-drawer{
-  z-index: 3;
+.choose-location-absolute{
+  position: absolute;
+  top: 86px;
+  right: 16px;
 }
 
 </style>

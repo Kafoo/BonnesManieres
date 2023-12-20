@@ -1,12 +1,11 @@
 <template>
-  <div class="text-no-wrap">
+  <v-sheet class="text-no-wrap">
       <hr/>
       <v-sheet class="d-flex flex-column justify-center align-center backgrounded ma-auto" color="blue" width="90%" height="250px">
 
         <ClassicTitle
         color='white'
-        line1="Let’s share who we are"
-        line2="watch what we do."
+        :text="['Let\'s share who we are', 'watch what we do.']"
         small
         />
 
@@ -62,7 +61,7 @@
     <v-footer color="secondary" class="d-flex justify-space-around white--text">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
     </v-footer>
-  </div>
+  </v-sheet>
 </template>
 
 <script lang="ts">
