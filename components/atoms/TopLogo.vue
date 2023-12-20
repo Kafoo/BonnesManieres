@@ -4,12 +4,12 @@
   elevation="0"
   width="100%"
   class="pa-9 d-flex justify-center"
-  :class="mobile?'pb-5':''"
+  :class="mobile?'pb-2 pt-6':''"
   v-intersect="onIntersect"
   >
     <router-link to="/">
       <v-img
-        :width="200"
+        :width="mobile?'170':'200'"
         :max-width="200"
         cover
         :src="require('@/static/TextLogo.png')"

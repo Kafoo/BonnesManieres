@@ -1,7 +1,7 @@
 <template>
   <v-sheet class="text-no-wrap">
 
-    <hr class="mb-3"/>
+    <hr class="mb-4"/>
 
     <FooterImage/>
 
@@ -21,11 +21,11 @@
       </v-sheet>
 
       <v-sheet class='Montserrat--text mx-3 mb-5 d-flex flex-column align-center'>
-        <v-sheet class="font-weight-bold mb-2">PARIS - CANNES - BARCELONE</v-sheet>
+        <v-sheet class="font-weight-bold mb-3">PARIS - CANNES - BARCELONE</v-sheet>
         <v-icon size="20px">mdi-cellphone</v-icon>
-        <v-sheet class="mb-2">+33 (0)6 84 58 67 64</v-sheet>
+        <v-sheet class="mb-3">+33 (0)6 84 58 67 64</v-sheet>
         <v-icon size="20px">mdi-email</v-icon>
-        <v-sheet class="mb-2">nadia@lesbonnesmanieres.paris</v-sheet>
+        <v-sheet class="mb-3">nadia@lesbonnesmanieres.paris</v-sheet>
         <SocialsIcons/>
       </v-sheet>
     </v-sheet>
@@ -42,7 +42,7 @@
       </p>
     </v-sheet>
 
-    <v-footer color="secondary" class="d-flex justify-space-around white--text backgrounded">
+    <v-footer color="secondary" class="d-flex justify-space-around white--text backgrounded Montserrat mentions-légales">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
     </v-footer>
   </v-sheet>
@@ -111,7 +111,8 @@ p{
   margin-bottom: 0px;
 }
 
-.Montserrat--text{
+.mentions-légales{
+  letter-spacing: 1px;
   font-size: 12px;
   line-height: 25px;
 }

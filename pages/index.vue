@@ -2,25 +2,37 @@
   <div class="relative">
 
       <v-sheet
-      class="d-flex flex-column justify-center align-center home-picture"
+      class="d-flex flex-column justify-center align-center ma-auto "
       width="100%"
       :height="mobile?'800px':'300px'"
       >
-        <ClassicTitle
-        v-if="mobile"
-        color='white'
-        :text="['Anything,', 'Anytime,', 'Anywhere']"
-        line1="Anything,"
-        line2="Anytime,"
-        line3="Anywhere"
-        />
+        <v-img
+        width="100%"
+        height="100%"
+        cover
+        :src="require('/static/pictures/Home.jpg')"
+        ></v-img>
+        <div style="position: absolute;" class="d-flex flex-column align-center">
+          <ClassicTitle
+          v-if="mobile"
+          color='white'
+          :text="['Anything,', 'Anytime,', 'Anywhere']"
+          line1="Anything,"
+          line2="Anytime,"
+          line3="Anywhere"
+          />
 
-        <ClassicTitle
-        v-else
-        color='white'
-        :text="['Anything, Anytime, Anywhere']"/>
+          <ClassicTitle
+          v-else
+          color='white'
+          :text="['Anything, Anytime, Anywhere']"/>
 
-        <ClassicButton text="découvrez notre expertise" to="/expertise"/>
+          <ClassicButton
+          text="découvrez notre expertise"
+          to="/expertise"
+          color="white"
+          />
+        </div>
 
       </v-sheet>
 
@@ -46,19 +58,32 @@
       cycle
       >
         <v-carousel-item
-          :src="require('@/static/pictures/Dior-303.jpg')"
-          cover
-        ></v-carousel-item>
+        :src="require('@/static/pictures/Dior-303.jpg')"
+        cover
+        >
+          <div class="carousel-title-container d-flex justify-center align-center">
+            <div class="carousel-title text-uppercase text-center">Soirées d'entreprise et lancement de produits</div>
+          </div>
+        </v-carousel-item>
 
         <v-carousel-item
-          :src="require('@/static/pictures/Dior-784.jpg')"
-          cover
-        ></v-carousel-item>
+        :src="require('@/static/pictures/Dior-784.jpg')"
+        cover
+        >
+          <div class="carousel-title-container d-flex justify-center align-center">
+            <div class="carousel-title text-uppercase text-center">Séminaires d'entreprise</div>
+          </div>
+        </v-carousel-item>
 
         <v-carousel-item
-          :src="require('@/static/pictures/alban_pichon.jpg')"
-          cover
-        ></v-carousel-item>
+        :src="require('@/static/pictures/alban_pichon_107.jpg')"
+        cover
+        >
+          <div class="carousel-title-container d-flex justify-center align-center">
+            <div class="carousel-title text-uppercase text-center">Lieux éphémères / Stands</div>
+          </div>
+        </v-carousel-item>
+
       </v-carousel>
 
     <v-sheet
@@ -68,7 +93,7 @@
 
       <LabeledPicture :imageSrc="require('@/static/pictures/Dior-303.jpg')" text="Soirées d'entreprise et lancement de produit"/>
       <LabeledPicture :imageSrc="require('@/static/pictures/Dior-784.jpg')" text="Séminaires d'entreprise"/>
-      <LabeledPicture :imageSrc="require('@/static/pictures/alban_pichon.jpg')" text="Lieux éphémères / Stands"/>
+      <LabeledPicture :imageSrc="require('@/static/pictures/alban_pichon_107.jpg')" text="Lieux éphémères / Stands"/>
 
     </v-sheet>
 
@@ -112,10 +137,23 @@ export default defineComponent({
   position: relative;
 }
 
-.home-picture{
-  background-image: url('static/pictures/Home.jpg');
-  background-size: cover;
-  background-position: 0px -150px;
+.carousel-title{
+  font-family: 'Yeseva One';
+  font-size: 30px;
+  letter-spacing: 1px;
+  padding: 25px;
+  max-width: 80%;
+  background-color: rgba(255, 255, 255, 0.533);
 }
+
+.carousel-title-container{
+  height: 100%;
+}
+
+/* .v-responsive__content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
 
 </style>

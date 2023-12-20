@@ -4,7 +4,10 @@
 
       <MobileDrawer :head= "head"/>
 
-      <ChooseLocation v-if="mobile" class="choose-location-absolute"/>
+      <ChooseLocation
+      v-if="mobile"
+      class="choose-location-absolute"
+      :mobile="true"/>
 
       <TopLogo @visibleHead="isHeadVisible"/>
 
@@ -65,8 +68,9 @@ export default defineComponent({
 
 .choose-location-absolute{
   position: absolute;
-  top: 86px;
-  right: 16px;
+  top: 60px;
+  right: 15px;
+  z-index: 1;
 }
 
 </style>

@@ -124,7 +124,7 @@ export default defineComponent({
   position: fixed;
   background-color: #ffffff;
   left: -10px;
-  top: 55px;
+  top: 36px;
   z-index: 2;
   box-shadow: none;
   transition: 0.5sec;
