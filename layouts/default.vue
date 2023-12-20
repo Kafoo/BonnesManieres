@@ -4,7 +4,7 @@
 
       <MobileDrawer :head= "head"/>
 
-      <ChooseLocation class="mobile choose-location-absolute"/>
+      <ChooseLocation v-if="mobile" class="choose-location-absolute"/>
 
       <TopLogo @visibleHead="isHeadVisible"/>
 
