@@ -2,27 +2,25 @@
   <div class="relative">
 
       <v-sheet
-      class="d-flex flex-column justify-center align-center backgrounded"
-      color="blue"
+      class="d-flex flex-column justify-center align-center home-picture"
       width="100%"
       :height="mobile?'800px':'300px'"
       >
+        <ClassicTitle
+        v-if="mobile"
+        color='white'
+        :text="['Anything,', 'Anytime,', 'Anywhere']"
+        line1="Anything,"
+        line2="Anytime,"
+        line3="Anywhere"
+        />
 
-          <ClassicTitle
-          v-if="mobile"
-          color='white'
-          :text="['Anything,', 'Anytime,', 'Anywhere']"
-          line1="Anything,"
-          line2="Anytime,"
-          line3="Anywhere"
-          />
+        <ClassicTitle
+        v-else
+        color='white'
+        :text="['Anything, Anytime, Anywhere']"/>
 
-          <ClassicTitle
-          v-else
-          color='white'
-          :text="['Anything, Anytime, Anywhere']"/>
-
-          <ClassicButton text="découvrez notre expertise" to="/expertise"/>
+        <ClassicButton text="découvrez notre expertise" to="/expertise"/>
 
       </v-sheet>
 
@@ -112,6 +110,12 @@ export default defineComponent({
 
 .relative{
   position: relative;
+}
+
+.home-picture{
+  background-image: url('static/pictures/Home.jpg');
+  background-size: cover;
+  background-position: 0px -150px;
 }
 
 </style>

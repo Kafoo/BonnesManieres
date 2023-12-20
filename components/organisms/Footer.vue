@@ -1,54 +1,38 @@
 <template>
   <v-sheet class="text-no-wrap">
-      <hr/>
-      <v-sheet class="d-flex flex-column justify-center align-center backgrounded ma-auto" color="blue" width="90%" height="250px">
 
-        <ClassicTitle
-        color='white'
-        :text="['Let\'s share who we are', 'watch what we do.']"
-        small
-        />
+    <hr class="mb-3"/>
 
+    <FooterImage/>
+
+    <FooterInfosDesktop v-if="!mobile"/>
+
+    <v-sheet
+    v-if="mobile"
+    class="d-flex justify-center flex-grow-1 align-center"
+    :class="mobile?'flex-column':''"
+    >
+      <v-sheet class="ma-5">
+        <v-img
+        :src="require('@/static/HeadTextLogo.png')"
+        width="160px"
+        >
+        </v-img>
       </v-sheet>
 
-    <v-sheet class="d-flex justify-space-around align-center flex-wrap-reverse ma-5 mb-8 mt-12 black--text">
-        <v-sheet
-        class="d-flex justify-space-around flex-grow-1 align-center"
-        :class="mobile?'flex-column':''"
-        >
-          <v-sheet>
-            <v-img
-            :src="require('@/static/HeadTextLogo.png')"
-            width="120px"
-            >
-            </v-img>
-          </v-sheet>
-
-          <v-sheet class='Montserrat--text'>
-            <v-sheet class="font-weight-bold">PARIS - CANNES - BARCELONE</v-sheet>
-            <v-sheet><v-icon size="17px">mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</v-sheet>
-            <v-sheet><v-icon size="17px">mdi-email</v-icon> nadia@lesbonnesmanieres.paris</v-sheet>
-            <SocialsIcons/>
-          </v-sheet>
-        </v-sheet>
-
-        <v-sheet
-        v-if="!mobile"
-        class="d-flex justify-space-around flex-grow-1 align-center"
-        >
-          <v-sheet>
-            <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
-          </v-sheet>
-          <v-sheet class="mr-8">
-            <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
-          </v-sheet>
-        </v-sheet>
-
+      <v-sheet class='Montserrat--text mx-3 mb-5 d-flex flex-column align-center'>
+        <v-sheet class="font-weight-bold mb-2">PARIS - CANNES - BARCELONE</v-sheet>
+        <v-icon size="20px">mdi-cellphone</v-icon>
+        <v-sheet class="mb-2">+33 (0)6 84 58 67 64</v-sheet>
+        <v-icon size="20px">mdi-email</v-icon>
+        <v-sheet class="mb-2">nadia@lesbonnesmanieres.paris</v-sheet>
+        <SocialsIcons/>
+      </v-sheet>
     </v-sheet>
 
     <v-sheet
     v-if="mobile"
-    class="d-flex flex-wrap mx-2 justify-center">
+    class="d-flex flex-wrap mx-2 mb-5 justify-center">
       <p
       v-for="activity in activities"
       :key="activity.name"
@@ -58,7 +42,7 @@
       </p>
     </v-sheet>
 
-    <v-footer color="secondary" class="d-flex justify-space-around white--text">
+    <v-footer color="secondary" class="d-flex justify-space-around white--text backgrounded">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
     </v-footer>
   </v-sheet>
@@ -66,14 +50,15 @@
 
 <script lang="ts">
 
-import { defineComponent } from '@nuxtjs/composition-api';
+import { defineComponent } from '@nuxtjs/composition-api'
 import SocialsIcons from '../atoms/SocialsIcons.vue'
-import ClassicTitle from '../atoms/ClassicTitle.vue';
+import FooterImage from '../molecules/FooterImage.vue'
+import FooterInfosDesktop from '../molecules/FooterInfosDesktop.vue'
 import { isMobile } from '~/ts/functions/composition/displayHelpers'
 
 export default defineComponent({
 
-  components: { SocialsIcons, ClassicTitle },
+  components: { SocialsIcons, FooterImage, FooterInfosDesktop },
 
   name: 'DefaultLayout',
   setup () {
@@ -122,13 +107,19 @@ hr{
 
 p{
   font-family: 'Montserrat';
-  line-height: 5px;
-
+  line-height: 20px;
+  margin-bottom: 0px;
 }
 
 .Montserrat--text{
   font-size: 12px;
   line-height: 25px;
+}
+
+.home-picture{
+  background-image: url('static/pictures/Home.jpg');
+  background-size: contain;
+  background-position: 0px -150px;
 }
 
 </style>

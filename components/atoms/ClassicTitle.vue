@@ -2,8 +2,8 @@
   <div>
     <h1 v-for="line in text"
     v-bind:key="line"
-    :class="[color+'--text', small ? 'small' : '']"
-    class="text-center text-no-wrap"
+    :class="color+'--text'"
+    class="text-center text-no-wrap classic-title"
     >
       {{ line }}
     </h1>
@@ -25,8 +25,7 @@ export default defineComponent({
         return []
       }
     },
-    color: { type: String, default: 'text' },
-    small: { type: Boolean }
+    color: { type: String, default: 'text' }
   },
   setup () {
     return {
@@ -37,9 +36,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-.small{
-  font-size: 30px;
-}
 
 </style>

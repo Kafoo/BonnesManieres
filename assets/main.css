@@ -65,6 +65,14 @@ p{
   max-width: 900px;
 }
 
+.small .classic-title{
+  font-size: 30px;
+}
+.xsmall .classic-title{
+  line-height: 1;
+  font-size: 22px;
+}
+
 .classic-text{
   font-family: 'Montserrat';
   font-size: 19pt;

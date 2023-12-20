@@ -9,7 +9,8 @@
 
     <v-toolbar-items class="centering" style="position: absolute; left: 10px;">
       <v-img
-      :class="head ? 'visible' : 'invisible'"
+      :class="
+      head ? 'visible' : 'invisible'"
       :src="require('@/static/HeadLogo.png')"
       width="40px"
       class="mr-3"
