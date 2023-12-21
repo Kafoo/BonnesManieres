@@ -62,36 +62,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false,
-      options: {
-        customProperties: true
-      },
-      themes: {
-        light: {
-          background: '#FFFFFF',
-          primary: '#FFFFFF',
-          text: '#3A3D51',
-          secondary: '#3A3D51',
-          third: '9F8C4E',
-          black: '#000000'
-        },
-        dark: {
-          background: '#FFFFFF',
-          primary: '#FFFFFF',
-          text: '#3A3D51',
-          secondary: '#3A3D51',
-          third: '9F8C4E',
-          black: '#000000',
-          accent: colors.grey.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    optionsPath: './vuetify.options.js'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -2,8 +2,8 @@
   <div>
     <h1 v-for="line in text"
     v-bind:key="line"
-    :class="color+'--text'"
-    class="text-center text-no-wrap classic-title"
+    :class="[color+'--text', wrap?'':'text-no-wrap', right?'text-right':left?'text-left':'text-center']"
+    class="classic-title"
     >
       {{ line }}
     </h1>
@@ -25,7 +25,10 @@ export default defineComponent({
         return []
       }
     },
-    color: { type: String, default: 'text' }
+    color: { type: String, default: 'text' },
+    wrap: { type: Boolean, default: true },
+    right: { type: Boolean, default: false },
+    left: { type: Boolean, default: false }
   },
   setup () {
     return {

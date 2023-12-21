@@ -19,8 +19,12 @@
   background-size: cover !important;
 }
 
-.backgrounded {
+.backgrounded, .v-menu__content {
     background-color: #ffffff !important;
+}
+
+.backgrounded-custom {
+    background-color: initial !important;
 }
 
 *{
@@ -41,6 +45,11 @@
             user-select: text; /* Non-prefixed version, currently*/
 }
 
+.theme--light.v-label{
+  color: black !important;
+  font-size: 10px;
+}
+
 h1{
   font-family: 'Yeseva One';
   font-size: 45px;
@@ -58,24 +67,20 @@ h3{
   font-size: 21pt;
 }
 
-p{
+p, .classic-text{
   font-family: 'Montserrat';
-  font-size: 12px;
-  letter-spacing: 1px;
-  max-width: 900px;
+  font-size: 11px;
+  max-width: 550px;
+  color: #3A3D51;
 }
 
 .small .classic-title{
   font-size: 30px;
 }
+
 .xsmall .classic-title{
   line-height: 1;
   font-size: 22px;
-}
-
-.classic-text{
-  font-family: 'Montserrat';
-  font-size: 19pt;
 }
 
 .bold-text{
@@ -94,6 +99,15 @@ p{
 
 .cursor{
   cursor: pointer;
+}
+
+.v-select__slot input{
+  cursor: pointer;
+}
+
+.v-menu__content{
+  font-family: 'Montserrat';
+  border-radius: 7px !important;
 }
 
 .centering{

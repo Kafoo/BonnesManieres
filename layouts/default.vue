@@ -14,9 +14,7 @@
       <HeaderVue :head= "head" />
 
       <v-main>
-        <v-container>
-          <Nuxt />
-        </v-container>
+        <Nuxt />
       </v-main>
 
       <FooterVue/>
