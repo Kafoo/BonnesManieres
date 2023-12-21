@@ -1,12 +1,15 @@
 <template>
   <div>
-      <v-sheet class="d-flex flex-column mx-5" width="240px">
+      <v-sheet
+      class="d-flex flex-column picture-container"
+      >
         <v-img
         :src=imageSrc
         width="240px"
         height="400px"
         ></v-img>
-        <v-sheet class="mt-3">
+        <v-sheet
+        :class="sm?'mt-1':'mt-3'">
           <p class="text-uppercase Yeseva--text sous-image mt-3">{{ text }}</p>
         </v-sheet>
       </v-sheet>
@@ -15,13 +18,17 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { isSm } from '~/ts/functions/composition/displayHelpers'
+
 export default defineComponent({
   props: {
     imageSrc: { type: String, default: require('@/static/pictures/Dior-303.jpg') },
     text: String
   },
   setup () {
+    const sm = isSm(window)
     return {
+      sm
     }
   }
 })
@@ -34,4 +41,25 @@ export default defineComponent({
   font-size: 12px;
 }
 
+.picture-container{
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 240px;
+
+}
+
+@media (max-width: 960px) {
+  .picture-container{
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+@media (max-width: 750px) {
+  .picture-container{
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 190px;
+  }
+}
 </style>

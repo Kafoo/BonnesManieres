@@ -25,6 +25,7 @@
 
     <v-sheet
     :width="mobile?'100%':'300px'"
+    :max-width="mobile?'350px':''"
     class="backgrounded Montserrat--text font-weight-bold mt-5">
       <v-form @submit.prevent>
 

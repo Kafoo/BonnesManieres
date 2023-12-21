@@ -42,7 +42,7 @@
       </p>
     </v-sheet>
 
-    <v-footer color="secondary" class="d-flex justify-space-around white--text backgrounded Montserrat mentions-légales">
+    <v-footer color="secondary" class="text-wrap text-center d-flex justify-space-around white--text backgrounded Montserrat mentions-légales">
       site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
     </v-footer>
   </v-sheet>

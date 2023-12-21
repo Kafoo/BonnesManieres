@@ -75,6 +75,13 @@ export default defineComponent({
   transition: 0.1s ease-out;
 }
 
+@media (max-width: 750px) {
+.nuxt-link{
+  font-size: 10.9px;
+  padding: 2px;
+}
+}
+
 .nuxt-link:hover, .nuxt-link-active {
   font-weight: 900;
   transition: 0.1s ease-out;

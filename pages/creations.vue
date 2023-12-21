@@ -1,8 +1,8 @@
 <template>
 
   <v-row class="centering">
-    <v-card class="d-flex justify-center mt-8 pt-8" width="80%" height="1000px">
-      <h2>Nos Créations</h2>
+    <v-card elevation="0" class="centering mt-8 pt-8" width="80%" height="1000px">
+      <h1 class="centering">Nos Créations</h1>
     </v-card>
   </v-row>
 

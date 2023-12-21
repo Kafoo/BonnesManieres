@@ -1,11 +1,10 @@
 <template>
   <div class="relative">
 
-
     <v-container>
 
       <v-sheet
-      class="d-flex flex-column justify-center align-center ma-auto "
+      class="d-flex flex-column justify-center align-center ma-auto mb-12"
       width="100%"
       :height="mobile?'600px':'300px'"
       >
@@ -43,7 +42,7 @@
 
       </v-sheet>
 
-      <v-sheet class="centering text-center">
+      <v-sheet class="centering text-center mb-12">
         <p class="black--text">Les Bonnes Manières est une agence événementielle qui s’associe aux plus grands acteurs du luxe pour créer des
           événements hors du commun. Notre engagement réside dans l’art de penser et de façonner chacun de vos événements en
           une expérience inoubliable, plaçant avec soin le client au coeur de chacun de nos choix.
@@ -105,7 +104,7 @@
     </v-container>
 
     <v-sheet
-    class="d-flex flex-column justify-center canvas backgrounded pa-10 mt-8 text--text"
+    class="d-flex flex-column justify-center canvas backgrounded pa-10 mt-8 mb-8 text--text"
     :class="mobile?'align-left':'align-center text-center'"
     width="100%"
     >
@@ -161,8 +160,6 @@
       text="Contactez-nous"
       to="/contact"/>
     </v-sheet>
-
-
 
     <v-container>
       <ContactForm/>
