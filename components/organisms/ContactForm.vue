@@ -6,13 +6,12 @@
   >
 
     <v-sheet
-    :width="mobile?'90%':'300px'"
+    :width="mobile?'90%':'350px'"
     :max-width="mobile?'350px':''"
     class="mt-8 d-flex flex-column"
     :class="!mobile?'align-end mr-7':'align-start'">
       <ClassicTitle
-      class="small"
-      :class="mobile?'line-height-1':''"
+      :class="mobile?'small line-height-2':'medium'"
       :right="!mobile"
       :left="mobile"
       :text="['Besoin d\'un', 'devis pour votre', 'projet ?']"
@@ -139,10 +138,6 @@ export default defineComponent({
 
 .break-max{
   max-width: 100%;
-}
-
-.line-height-1{
-  line-height: 1;
 }
 
 </style>

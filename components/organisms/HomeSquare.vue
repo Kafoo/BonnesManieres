@@ -8,7 +8,7 @@
     <ClassicTitle
     color='text'
     :text="['We think out of the box']"
-    class="small wrap-text my-2"
+    class="medium wrap-text my-2"
     wrap
     :left="mobile"
     />

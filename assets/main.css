@@ -89,6 +89,10 @@ p, .classic-text{
   font-size: 25px;
 }
 
+.line-height-2 h1{
+  line-height: 1.3;
+}
+
 .bold-text{
   font-family: 'Montserrat';
   font-size: 19pt;

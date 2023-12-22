@@ -6,9 +6,9 @@
     :class="mobile?'d-flex flex-column':'centering-column'">
         <HorizontalDivider/>
         <ClassicTitle
-        class="my-3"
+        class="my-4"
         :text="['Nos services']"
-        :class="mobile?'small':''"
+        :class="mobile?'medium':''"
         :left="mobile"/>
         <HorizontalDivider/>
 
