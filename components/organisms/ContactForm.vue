@@ -62,7 +62,7 @@
         hide-details
         autocomplete="LBM"
         label="Nombre d'invités"
-        :items="['< 150', '150-300', '300-500', '> 500']"
+        :items="['50 - 150', '150 - 300', '300 - 500', '500 +']"
         ></v-select>
 
         <v-text-field
