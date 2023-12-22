@@ -28,4 +28,12 @@ export default defineComponent({
 
 <style scoped>
 
+@media (max-width: 600px) {
+.v-btn{
+  letter-spacing: 2px;
+  border: 2px solid;
+}
+  
+}
+
 </style>

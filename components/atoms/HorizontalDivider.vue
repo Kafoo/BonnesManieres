@@ -24,7 +24,9 @@ hr {
   border-top: 2px solid black;
   color: #333;
   height: 3px;
-  width: 25px;
+  width: 30px;
 }
+
+
 
 </style>

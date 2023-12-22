@@ -1,8 +1,26 @@
 <template>
   <div class="cursor">
-      <v-icon class="ma-0" color="text" style="position: relative;">mdi-facebook</v-icon>
-      <v-icon class="ma-0" color="text" style="position: relative;">mdi-instagram</v-icon>
-      <v-icon class="ma-0" color="text" style="position: relative;">mdi-linkedin</v-icon>
+      <v-icon
+      class="ma-0"
+      :class="mobile?'mx-2':''"
+      color="text"
+      style="position: relative;"
+      :size="mobile?'40px':''"
+      >mdi-facebook</v-icon>
+      <v-icon
+      class="ma-0"
+      :class="mobile?'mx-2':''"
+      color="text"
+      style="position: relative;"
+      :size="mobile?'40px':''"
+      >mdi-instagram</v-icon>
+      <v-icon
+      class="ma-0"
+      :class="mobile?'mx-2':''"
+      color="text"
+      style="position: relative;"
+      :size="mobile?'40px':''"
+      >mdi-linkedin</v-icon>
   </div>
 </template>
 
@@ -10,7 +28,7 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   props: {
-
+    mobile: { type: Boolean, default: false }
   },
   data () {
     return {

@@ -1,9 +1,11 @@
 <template>
-    <v-sheet class="d-flex flex-column justify-center align-center ma-auto " width="90%" height="250px">
+    <v-sheet
+    class="d-flex flex-column justify-center align-center ma-auto "
+    :width="mobile?'100%':'90%'"
+    height="250px">
       <v-img
       width="100%"
       height="100%"
-
       cover
       :src="require('/static/pictures/Home.jpg')"
       ></v-img>

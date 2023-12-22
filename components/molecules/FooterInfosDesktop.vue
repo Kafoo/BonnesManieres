@@ -1,7 +1,7 @@
 <template>
 <v-sheet class="d-flex justify-space-around align-center flex-wrap ma-5 my-5 black--text">
         <v-sheet
-        class="d-flex justify-center flex-grow-1 align-center"
+        class="d-flex justify-center flex-grow-1 align-center mb-4"
         >
           <v-sheet class="mr-5 mb-5">
             <v-img
@@ -11,7 +11,7 @@
             </v-img>
           </v-sheet>
 
-          <v-sheet class='Montserrat--text mx-3'>
+          <v-sheet class='footer-contact mx-3'>
             <v-sheet class="font-weight-bold">PARIS - CANNES - BARCELONE</v-sheet>
             <v-sheet><v-icon size="17px">mdi-cellphone</v-icon>+33 (0)6 84 58 67 64</v-sheet>
             <v-sheet><v-icon size="17px">mdi-email</v-icon> nadia@lesbonnesmanieres.paris</v-sheet>
@@ -20,13 +20,13 @@
         </v-sheet>
 
         <v-sheet
-        class="d-flex justify-center flex-grow-1 align-center"
+        class="d-flex justify-center flex-grow-1 align-center footer-activities"
         >
-          <v-sheet class="mx-3 mr-5">
-            <p v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</p>
+          <v-sheet class="mx-3 mr-5 d-flex flex-column">
+            <span v-for="activity in activitesColumn1" :key="activity.name">- {{activity.name}}</span>
           </v-sheet>
-          <v-sheet class="mx-3">
-            <p v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</p>
+          <v-sheet class="mx-3 d-flex flex-column">
+            <span v-for="activity in activitesColumn2" :key="activity.name">- {{activity.name}}</span>
           </v-sheet>
         </v-sheet>
 
@@ -85,9 +85,18 @@ p{
   margin-bottom: 0px;
 }
 
-.Montserrat--text{
+.footer-contact{
+  font-family: 'Montserrat';
   font-size: 12px;
   line-height: 25px;
+}
+
+.footer-activities{
+  font-family: 'Montserrat';
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 0px;
+  letter-spacing: 1px;
 }
 
 </style>

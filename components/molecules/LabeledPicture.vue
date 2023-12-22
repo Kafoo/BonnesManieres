@@ -55,11 +55,20 @@ export default defineComponent({
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 820px) {
   .picture-container{
-    margin-left: 5px;
-    margin-right: 5px;
-    max-width: 190px;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 210px;
   }
 }
+
+@media (max-width: 700px) {
+  .picture-container{
+    margin-left: 3px;
+    margin-right: 3px;
+    max-width: 180px;
+  }
+}
+
 </style>

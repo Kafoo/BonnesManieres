@@ -6,56 +6,62 @@
   >
 
     <v-sheet
-    max-width="300px"
+    :width="mobile?'90%':'300px'"
+    :max-width="mobile?'350px':''"
     class="mt-8 d-flex flex-column"
-    :class="!mobile?'align-end mr-7':'align-center'">
+    :class="!mobile?'align-end mr-7':'align-start'">
       <ClassicTitle
       class="small"
       :class="mobile?'line-height-1':''"
       :right="!mobile"
+      :left="mobile"
       :text="['Besoin d\'un', 'devis pour votre', 'projet ?']"
       />
       <p
       class="classic-text mt-5"
-      :class="mobile?'text-center break-max':'text-right'">
+      :class="mobile?'text-left break-max':'text-right'">
         Nous serons ravis de vous aider que votre projet soit défini ou non !
         Remplissez notre formulaire, nous reviendrons vers vous dans les plus brefs délais.
       </p>
     </v-sheet>
 
     <v-sheet
-    :width="mobile?'100%':'300px'"
+    :width="mobile?'90%':'300px'"
     :max-width="mobile?'350px':''"
-    class="backgrounded Montserrat--text font-weight-bold mt-5">
+    class="backgrounded Montserrat--text text--text font-weight-bold mt-5">
       <v-form @submit.prevent>
 
         <v-text-field
         hide-details
         v-model="firstName"
+        autocomplete="LBM"
         label="Nom - Prénom"
         ></v-text-field>
 
         <v-text-field
         hide-details
         v-model="firstName"
+        autocomplete="LBM"
         label="Email"
         ></v-text-field>
 
         <v-text-field
         hide-details
         v-model="firstName"
+        autocomplete="LBM"
         label="Téléphone"
         ></v-text-field>
 
-        <v-select
-        :menu-props="{ contentClass: 'plop' }"
+        <v-text-field
         hide-details
+        v-model="firstName"
+        autocomplete="LBM"
         label="Type d'événement"
-        :items="['Séminaire', 'Lancement de produit', 'Soirée d\'entreprise', 'Autre']"
-        ></v-select>
+        ></v-text-field>
 
         <v-select
         hide-details
+        autocomplete="LBM"
         label="Nombre d'invités"
         :items="['< 150', '150-300', '300-500', '> 500']"
         ></v-select>
@@ -63,19 +69,20 @@
         <v-text-field
         hide-details
         v-model="firstName"
+        autocomplete="LBM"
         label="Date de l'événement"
         ></v-text-field>
 
         <v-textarea
         hide-details
+        autocomplete="LBM"
         label="Votre Message"
         no-resize
         rows="2"
         ></v-textarea>
         <div class="submit-container">
           <ClassicButton text="Envoyer"
-          :class="mobile?'':'mr-0'"
-          small/>
+          :class="mobile?'mt-10':'mt-5'"/>
         </div>
       </v-form>
     </v-sheet>
@@ -114,6 +121,12 @@ export default defineComponent({
   width: 100%;
   display: flex;
   justify-content: right;
+}
+
+@media (max-width: 600px) {
+.submit-container{
+  justify-content: center;
+}
 }
 
 .v-input{

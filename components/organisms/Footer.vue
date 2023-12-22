@@ -1,5 +1,5 @@
 <template>
-  <v-sheet class="text-no-wrap">
+  <v-sheet>
 
     <hr class="mb-4"/>
 
@@ -20,30 +20,38 @@
         </v-img>
       </v-sheet>
 
-      <v-sheet class='Montserrat--text mx-3 mb-5 d-flex flex-column align-center'>
-        <v-sheet class="font-weight-bold mb-3">PARIS - CANNES - BARCELONE</v-sheet>
-        <v-icon size="20px">mdi-cellphone</v-icon>
+      <v-sheet class='footer-infos mx-3 mb-9 d-flex flex-column align-center'>
+        <v-sheet class="font-weight-bold mb-5">PARIS - CANNES - BARCELONE</v-sheet>
+        <v-icon class="ma-2 pa-2" color="black" size="27px">mdi-cellphone</v-icon>
         <v-sheet class="mb-3">+33 (0)6 84 58 67 64</v-sheet>
-        <v-icon size="20px">mdi-email</v-icon>
-        <v-sheet class="mb-3">nadia@lesbonnesmanieres.paris</v-sheet>
-        <SocialsIcons/>
+        <v-icon class="ma-2 pa-2" color="black" size="27px">mdi-email</v-icon>
+        <v-sheet class="mb-7">nadia@lesbonnesmanieres.paris</v-sheet>
+        <SocialsIcons mobile/>
       </v-sheet>
     </v-sheet>
 
-    <v-sheet
-    v-if="mobile"
-    class="d-flex flex-wrap mx-2 mb-5 justify-center">
-      <p
-      v-for="activity in activities"
-      :key="activity.name"
-      class="mr-2"
-      >
-        - {{ activity.name }}
-      </p>
-    </v-sheet>
+    <div class="centering">
+      <v-sheet
+      v-if="mobile"
+      class="mx-2 mb-5 d-flex flex-wrap footer-activities">
+        <span
+        v-for="activity in activities"
+        :key="activity.name"
+        class="mr-2"
+        >
+          - {{ activity.name }}
+        </span>
+      </v-sheet>
+    </div>
 
-    <v-footer color="secondary" class="text-wrap text-center d-flex justify-space-around white--text backgrounded Montserrat mentions-légales">
-      site officiel : tous droits réservés les bonnes manières - © 2023 - mentions légales
+    <v-footer
+    color="secondary"
+    class="text-wrap white--text backgrounded Montserrat mentions-légales"
+    :class="mobile?'':'text-center justify-space-around'"
+    >
+      <div>
+        site officiel : tous droits réservés les bonnes manières - © 2023 - <u>mentions légales</u>
+      </div>
     </v-footer>
   </v-sheet>
 </template>
@@ -105,22 +113,36 @@ hr{
   font-size: small;
 }
 
-p{
-  font-family: 'Montserrat';
-  line-height: 20px;
-  margin-bottom: 0px;
-}
-
 .mentions-légales{
   letter-spacing: 1px;
   font-size: 12px;
-  line-height: 25px;
+  line-height: 17px;
+  padding: 15px 38px;
 }
 
 .home-picture{
   background-image: url('static/pictures/Home.jpg');
   background-size: contain;
   background-position: 0px -150px;
+}
+
+.footer-infos{
+  font-family: 'Montserrat';
+  font-size: 18px;
+}
+
+.footer-infos .v-icon{
+  border: 3px solid black;
+  border-radius: 50px;
+  font-size: 20px;
+}
+
+.footer-activities{
+  font-family: 'Montserrat';
+  line-height: 24px;
+  max-width: 80%;
+  font-size: 13px;
+  margin-bottom: 0px;
 }
 
 </style>

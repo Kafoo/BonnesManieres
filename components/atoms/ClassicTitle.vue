@@ -2,7 +2,13 @@
   <div>
     <h1 v-for="line in text"
     v-bind:key="line"
-    :class="[color+'--text', wrap?'':'text-no-wrap', right?'text-right':left?'text-left':'text-center']"
+    :class="[color+'--text',
+    wrap?'':'text-no-wrap',
+    right?'text-right':
+    left?'text-left':
+    spaced?'text-center my-5':
+    'text-center mb-1'
+    ]"
     class="classic-title"
     >
       {{ line }}
@@ -25,6 +31,7 @@ export default defineComponent({
         return []
       }
     },
+    spaced: { type: Boolean, default: false },
     color: { type: String, default: 'text' },
     wrap: { type: Boolean, default: true },
     right: { type: Boolean, default: false },

@@ -46,15 +46,16 @@
 }
 
 .theme--light.v-label{
-  color: black !important;
-  font-size: 10px;
+  font-size: 13px;
 }
 
 h1{
+  font-weight: normal;
   font-family: 'Yeseva One';
-  font-size: 45px;
+  font-size: 48px;
   margin-bottom: 5px;
-  letter-spacing: 1px;
+  line-height: 1;
+  margin: 0;
 }
 
 h2{
@@ -69,18 +70,23 @@ h3{
 
 p, .classic-text{
   font-family: 'Montserrat';
-  font-size: 11px;
+  font-size: 15px;
+  line-height: 26px;
   max-width: 550px;
   color: #3A3D51;
 }
 
+.medium .classic-title{
+  font-size: 40px;
+}
+
 .small .classic-title{
-  font-size: 30px;
+  font-size: 33px;
 }
 
 .xsmall .classic-title{
   line-height: 1;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .bold-text{
@@ -121,6 +127,10 @@ p, .classic-text{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.relative{
+  position: relative;
 }
 
 @media (min-width: 601px) {

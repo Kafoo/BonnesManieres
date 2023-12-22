@@ -5,13 +5,16 @@
 <script lang="ts">
 
 import { defineComponent } from 'vue'
+import { isMobile } from '~/ts/functions/composition/displayHelpers';
 
 export default defineComponent({
 
   name: '',
 
   setup () {
+    const mobile = isMobile(window)
     return {
+      mobile
     }
   }
 })
